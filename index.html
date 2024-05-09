@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>DevClub-JokenPô</title>
+</head>
+
+ 
+<div class="geral">
+
+    <h1 class="title">JokenPô</h1>
+
+    <div class="cards">
+        <div class="container">
+            <div class="flip">
+                <div class="front"></div>
+
+                <div onclick="playHuman('rock')" id="rock" class="back"> <img src="./assets/Carta-rock.png"> </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flip">
+                <div class="front"></div>
+
+                <div onclick="playHuman('paper')" id="paper" class="back"> <img src="./assets/Carta-paper.png"> </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="flip">
+                <div class="front"></div>
+
+                <div onclick="playHuman('scissors')" id="scissors" class="back"> <img src="./assets/Carta-scissors.png"> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="results">
+        <p class="result"></p>
+        <p class="your-score">Sua pontuação: <span id="human-score"> 0 </span></p>
+        <p class="machine-score">Pontuação da maquina: <span id="machine-score"> 0</span></p>
+    </div>
+</div>
+
+<body>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
