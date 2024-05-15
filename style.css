@@ -13,7 +13,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-left: 3.4375rem;
-    background-image: url(./assets/img-background-jokenpo.png);
+    background-image: url(./assets/img-youmeko-marry.png);
     background-size: cover;
 }
 
@@ -104,7 +104,7 @@ p {
 
 @media screen and (max-width: 600px) {
     body {
-        background-image: url(./assets/img-white.png);
+        background-image: url(./assets/planodefundo-img.png);
         background-size: cover;
         padding: 0px;
     }
