@@ -6,13 +6,21 @@ const machineScore = document.querySelector('#machine-score')
 let humanScoreNumber = 0 /* esse cara aqui vai ficar contando quantos pontos eu tenho */
 let machineScoreNumber = 0
 
+
+//ENUM
+const GAME_OPTIONS = {
+    ROCK : 'rock',
+    PAPER : 'paper',
+    SCISSORS : 'scissors'
+}
+
 const playHuman = (humanChoice) => {   /*pegar o click e a escolha do humano */
     playTheGame(humanChoice, playMachine())
 
 }
 
 const playMachine = () => {  /* "escolha" da maquina */
-    const choices = ['rock', 'paper', 'scissors'] /* a maquina tem 3 opções */
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS] /* a maquina tem 3 opções */
     const randomNumber = Math.floor(Math.random() * 3) /* o Math.random vai sortear as opções, e como ele so sorteia numeros entre 0 a 1, vamos multiplicar o valor que der por 3 */
     /* e com ajuda do Math.floor, os numeros depois de sorteados e multiplicados, serão arredondados pra baixo */
 
@@ -34,9 +42,9 @@ const playTheGame = (human, machine) => {  /* vai verificar quem ganhou, humano 
         apareça na tela 'Empate' com ajuda do innerHTML */
 
     } else if (
-        (human === 'paper' && machine === 'rock') ||
-        (human === 'rock' && machine === 'scissors') ||
-        (human === 'scissors' && machine === 'paper')
+        (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK) ||
+        (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS) ||
+        (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER)
     ) {
         humanScoreNumber++ /* toda vez que o humano ganhar eu adiciono mais um */
         humanScore.innerHTML = humanScoreNumber /* para o numero que esta no span, mudar conforme a pontuação for mudando! */
